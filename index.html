@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mars Rover</title>
+  <script src="javascripts/app.js"></script>
+</head>
+<body>
+  <pre>
+
+    Turning the Rover ✓
+
+    The rover has a direction attribute. We’ve already provided functions called
+    turnLeft and turnRight that receive a rover object as an argument.
+    Your job is to turn the rover in the appropriate direction based off of its
+    current direction.
+
+    Examples:
+    + Rover is facing North and turns left => Rover is now facing West
+    + Rover is facing West and turns left => Rover is now facing South
+    + Rover is facing North and turns right => Rover is now facing East.
+
+    Begin with the a switch statement. Based off of which function is being called,
+    turn the rover in the correct direction based off of its current direction.
+
+    Test these functions using the Chrome Console to make sure they work. Remember,
+    the console.log() function can be used to log anything. You can use this to see which
+    direction your rover is currently facing.
+
+    Moving the Rover: Forward ✓
+
+    Moving forward is a function of the rover’s current direction, and the movement forward.
+    For instance:
+    If the Rover is facing west and moves forward, we would decrease the Rover’s x by 1.
+    If the rover is facing north and moves forward, we would decrease the rover’s y by 1.
+    If the rover is facing south and moves forward, we would increase the y by 1.
+
+    Fill in this logic in the moveForward function. After each movement, console.log the
+    rover’s coordinates so you can see where it is positioned.
+
+    BONUS: 1
+
+    Moving the Rover: Backwards ✓
+
+    If you found the first few iterations of the exercise easy, try implementing the
+    following features:
+
+    Moving Backwards: Create another function called moveBackward that will move the
+    rover back.
+    This will be very similiar to the moveForward function.
+    Validate Inputs: If we enter a letter into our inputs that isn’t a rover command,
+    nothing happens.
+    For example ffzzy would simply move forward twice. Add validation so that the
+    inputs must be f, b, r, or l.
+
+    Rover Commands ✓
+
+    Create a function that receives a list of commands. These commands will be the
+    first letter of either (f)orward, (r)ight, or (l)eft.
+
+    To test it, use the string: ‘rffrfflfrff’.
+
+    Suggested Approach
+
+    Use a loop to iterate over the string. Inside of this loop, write a switch or
+    if statement to
+    call the correct function. For instance,
+    if the letter is f, you’re going to want to call the goForward function.
+
+    Tracking the Rover ✓
+
+    We want to know where our rover has been. Create a property on the rover object that
+    contains the coordinates of the places it has been. Call this property travelLog.
+
+    After each move, push the coordinates of the previous space to the travelLog array.
+    After the rover has finished its moves, print out all of the spaces the rover has
+    traveled over.
+
+    BONUS: 2 ✓
+
+    At some point you may have accidentally run our rover off of the grid.
+    If you recall, our grid is 10x10.
+    Make sure your rover doesn’t accidentally roam off the map!
+
+    BONUS: 3 ✗
+
+    The following require you to actually create a grid for the rover to move around on.
+    In code, these grids are often represented as two dimensional arrays.
+
+    3.1
+    Obstacles - Create obstacles for the rover. If the rover’s next move would run
+    it into an obstacle, stop it from moving forward and report the obstacle as found with
+    console.log.
+
+    3.2
+    Other Rovers - Add additional rovers to the map. Have them take turns moving.
+    If one rover isgoing to run into the other, you should stop the rover and
+    console.log a message saying so.
+
+  <pre>
+ody>
+</html>
