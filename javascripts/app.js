@@ -93,7 +93,6 @@ function moveForward(rover) {
       console.log('✓ Rover within the grid, moving forward _-_-_-');
       rover.x = x;
       rover.y = y;
-      console.log(rover.x, rover.y);
     } else { console.log('✗ Rover cant move forward due to obstacle'); }
 
   } else { console.log('✗ Rover cant operate outside of the grid'); }
@@ -128,7 +127,6 @@ function moveBackward(rover) {
       console.log('✓ Rover within the grid, moving backwards _-_-_-');
       rover.x = x;
       rover.y = y;
-      console.log(rover.x, rover.y);
     } else { console.log('✗ Rover cant move backwards due to obstacle'); }
 
   } else { console.log('✗ Rover cant operate outside of the grid'); }
