@@ -90,13 +90,12 @@ function moveForward(rover) {
   if (y >= 0 && y <= 9 && x >= 0 && x <= 9) {
 
     if (grid[x][y] !== 'O') {
-      console.log('✓ Rover within the grid, moving forward _-_-_-');
+      console.log('%c✓ Rover within the grid, moving forward _-_-_-', 'color: green;');
       rover.x = x;
       rover.y = y;
-      console.log(rover.x, rover.y);
-    } else { console.log('✗ Rover cant move forward due to obstacle'); }
+    } else { console.log('%c✗ Rover cant move forward due to obstacle', 'color: red;'); }
 
-  } else { console.log('✗ Rover cant operate outside of the grid'); }
+  } else { console.log('%c✗ Rover cant operate outside of the grid', 'color: red;'); }
 
   console.log('Position after command: ' + '[' + rover.x + ', ' + rover.y + ']');
   saveCoordinates(rover.x, rover.y);
@@ -125,13 +124,12 @@ function moveBackward(rover) {
   if (y >= 0 && y <= 9 && x >= 0 && x <= 9) {
 
     if (grid[x][y] !== 'O') {
-      console.log('✓ Rover within the grid, moving backwards _-_-_-');
+      console.log('%c✓ Rover within the grid, moving backwards _-_-_-', 'color: green;');
       rover.x = x;
       rover.y = y;
-      console.log(rover.x, rover.y);
-    } else { console.log('✗ Rover cant move backwards due to obstacle'); }
+    } else { console.log('%c✗ Rover cant move backwards due to obstacle', 'color: red;'); }
 
-  } else { console.log('✗ Rover cant operate outside of the grid'); }
+  } else { console.log('%c✗ Rover cant operate outside of the grid', 'color: red;'); }
 
   console.log('Position after command: ' + '[' + rover.x + ', ' + rover.y + ']');
   saveCoordinates(rover.x, rover.y);
@@ -162,7 +160,7 @@ function roverCommands(commands) {
         turnLeft(rover);
         break;
       default:
-        console.log('✗ Unknown command, allowed: "f", "b", "r", "l"');
+        console.log('%c✗ Unknown command, only allowed: "f", "b", "r", "l"', 'color: yellow;');
     }
     console.log('[' + i + ']' + 'Command entered' +  ': "' + commands[i] + '"');
     console.log('\n');
